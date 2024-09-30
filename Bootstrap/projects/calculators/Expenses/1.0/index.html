@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Expenses Calculator 1.0</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script type="module" src="./components/Bill.js"></script>
+  <script type="module" src="./components/data.js"></script>
+  <script type="module" src="./components/Total.js"></script>
+  <script type="module" src="script.js"></script>
+</head>
+<body>
+
+<div class="container-fluid p-5 bg-primary text-white text-center">
+  <h1 class="display-2">Expenses Calculator 1.0</h1>
+  <p>Resize this responsive page to see the effect!</p> 
+</div>
+  
+<div class="container mt-3">
+  <div class="row">
+    <!-- <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>Management Fee</th>
+            <th>Property Tax</th>
+            <th>Mortgage</th>
+            <th>Gas</th>
+            <th>Electricity</th>
+            <th>Netflix</th>
+            <th>Virgin Media</th>
+            <th>Max</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1469.45</td>
+            <td>191</td>
+            <td>334.27</td>
+            <td>60.02</td>
+            <td>71.70</td>
+            <td>14.99</td>
+            <td>74.99</td>
+            <td>6.34</td>
+          </tr>         
+        </tbody>
+      </table> -->
+      <table class="table table-hover table-sm">
+        <thead>
+          <tr>
+            <th>Type</th>
+            <th>Bank Account</th>
+            <th>Amount</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- <tr>
+            <td>Management Fee</td>
+            <td></td>
+          </tr> -->
+        </tbody>
+        <tr>            
+          <th>Total</th>
+          <th class="total"></th>
+        </tr>
+      </thead>        
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

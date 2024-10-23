@@ -13,17 +13,11 @@ const content = billsArray.map((bill) => {
   billRow.setAttribute("id", bill.id);
 
   // Set textContet (safer than innerHTML) of billArticle using the bill object
-  billRow.innerHTML = `
+  const newRow = `
             <tr>
               <td class="bill__type">${bill.type}</td>
-            </tr>
-            <tr>
               <td class="bill__type">${formatter("en-US", "EUR", bill.amount)}</td>
-            </tr>
-            <tr>
               <td class="bill__type">${bill.acc}</td>
-            </tr>
-            <tr>
               <td class="bill__type">${bill.status ? 
                 "<span class= paid> paid </span>" : 
                 "<span class= unpaid> not paid </span>"}
@@ -31,7 +25,7 @@ const content = billsArray.map((bill) => {
             </tr>
    `;
 
-   return billRow;
+   return newRow;
 
 });
 
@@ -39,7 +33,7 @@ const content = billsArray.map((bill) => {
 const main = document.querySelector(".contents");
 // Loop through the content array to append each bill.
 content.forEach((bill) => {
-  main.append(bill);
+  main.insertAdjacentHTML('beforeend', bill);
 });
 
 // Bills sections end here
@@ -100,20 +94,20 @@ finalBal.setAttribute("id", totalArrTitles[i].replaceAll(' ',""));
 
 
 // Sets the innerHTML of billRow using the bill object
-finalBal.innerHTML = `
+const finalRow = `
       <tr>
           <th>${totalArrTitles[i++]}</th>
           <td class="bill__total">${formatter("en-US", "EUR", total)}</td>
       </tr>
 `;
-return finalBal;
+return finalRow;
 });
 
 const total = document.querySelector(".totals");
 
 //Loops through each content
 totalSummary.forEach((t) => {
-  total.append(t)
+  total.insertAdjacentHTML('beforeend', t)
 });
 
 
